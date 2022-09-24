@@ -3,7 +3,6 @@ public class ArithmetischeOperationen {
     /**
      * Ausführung aller arithmetischer Operationen und Ausgabe
      *
-     * @param args
      */
     public static void main(String[] args) {
         //deklarieren & Initialisieren
