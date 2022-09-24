@@ -34,7 +34,7 @@ public class ArithmetischeOperationen {
         //Restwert/Modolo
         Ergebnis = a % b;
         System.out.println("Zahl a % Zahl b = " + Ergebnis);
-
+//
 
     }
 }
