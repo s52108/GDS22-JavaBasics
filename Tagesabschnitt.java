@@ -1,24 +1,35 @@
 public class Tagesabschnitt {
+    /**
+     *
+     * Retourniere Tagesabschnitt abhängig bon der Uhrzeit
+     * 6-9 (exkl) -> Früh
+     * 9-12 (exkl) -> Vormittag
+     * 12-16 (exkl) -> Nachmittag
+     * 16-20 (exkl) -> Abend
+     * 20-06 (exkl) -> Nacht
+     *
+     * @param args Programmargumente (nicht verwendet)
+     */
     public static void main(String[] args) {
-        int uhrzeit = 23;
+        byte uhrzeit = 14;
         System.out.println("Uhrzeit = " + uhrzeit);
         System.out.println("Tagesabschnitt = " + tagesabschnitt(uhrzeit));
     }
 
-    public static String tagesabschnitt(int a) {
-        if (a >= 0 && a <= 24) {
+    public static String tagesabschnitt(int uhrzeit) {
+        if (uhrzeit >= 0 && uhrzeit <= 24) {
 
-            if (a <= 9 && a >= 6) {
+            if (uhrzeit <= 9 && uhrzeit >= 6) {
                 return ("Früh");
-            } else if (a > 9 && a < 12) {
+            } else if (uhrzeit > 9 && uhrzeit < 12) {
                 return ("Vormittag");
-            } else if (a >= 12 && a < 16) {
+            } else if (uhrzeit >= 12 && uhrzeit < 16) {
                 return ("Nachmittag");
-            } else if (a >= 16 && a < 20) {
+            } else if (uhrzeit >= 16 && uhrzeit < 20) {
                 return ("Abend");
             }
             return ("Nacht");
         }
-        return ("Keine Gültige Uhrzeit");
+        return ("Keine gültige Uhrzeit");
     }
 }
