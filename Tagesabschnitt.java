@@ -1,6 +1,5 @@
 public class Tagesabschnitt {
     /**
-     *
      * Retourniere Tagesabschnitt abhängig bon der Uhrzeit
      * 6-9 (exkl) -> Früh
      * 9-12 (exkl) -> Vormittag
@@ -11,21 +10,49 @@ public class Tagesabschnitt {
      * @param args Programmargumente (nicht verwendet)
      */
     public static void main(String[] args) {
-        byte uhrzeit = 14;
-        System.out.println("Uhrzeit = " + uhrzeit);
-        System.out.println("Tagesabschnitt = " + tagesabschnitt(uhrzeit));
+        byte hour = 24;
+        String abschnitt = "";
+
+        abschnitt = getDayTimeName(hour);
+
+        //casting
+        // abschnitt = getDayTimeName((byte)24);
+
+        System.out.println("Tagesabschnitt = " + abschnitt);
+
     }
 
-    public static String tagesabschnitt(int uhrzeit) {
-        if (uhrzeit >= 0 && uhrzeit <= 24) {
+    /**
+     * public static void tagesabschnitt(int uhrzeit) {
+     * if (uhrzeit >= 0 && uhrzeit <= 24) {
+     * <p>
+     * if (uhrzeit <= 9 && uhrzeit >= 6) {
+     * return ("Früh");
+     * } else if (uhrzeit > 9 && uhrzeit < 12) {
+     * return ("Vormittag");
+     * } else if (uhrzeit >= 12 && uhrzeit < 16) {
+     * return ("Nachmittag");
+     * } else if (uhrzeit >= 16 && uhrzeit < 20) {
+     * return ("Abend");
+     * }
+     * return ("Nacht");
+     * }
+     * return ("Keine gültige Uhrzeit");
+     * }
+     **/
+    //publiv stativ return_type (void) name (parameter)
+    public static String getDayTimeName(byte time) {
+        String abschnitt;
 
-            if (uhrzeit <= 9 && uhrzeit >= 6) {
+        if (time >= 0 && time <= 24) {
+
+            if (time <= 9 && time >= 6) {
                 return ("Früh");
-            } else if (uhrzeit > 9 && uhrzeit < 12) {
+            } else if (time > 9 && time < 12) {
                 return ("Vormittag");
-            } else if (uhrzeit >= 12 && uhrzeit < 16) {
+            } else if (time >= 12 && time < 16) {
                 return ("Nachmittag");
-            } else if (uhrzeit >= 16 && uhrzeit < 20) {
+            } else if (time >= 16 && time < 20) {
                 return ("Abend");
             }
             return ("Nacht");
