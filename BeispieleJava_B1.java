@@ -7,5 +7,11 @@ public class BeispieleJava_B1 {
             System.out.println(b);
 
         }
+
+        int b=1;
+        while ( b <= a){
+            System.out.println(b);
+            b++;
+        }
     }
 }
