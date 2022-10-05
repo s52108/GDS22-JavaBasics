@@ -17,8 +17,8 @@ public class Calculator {
         System.out.println("Ergebnis = " + SummeAddition);
         //soutv + Tab -> Variable wird ausgegeben
         System.out.println("SummeAddition = " + SummeAddition);*/
-        int a = 100;
-        int b = 10;
+        int a = 27;
+        int b = 4302;
 
         System.out.println("a = " + a);
         System.out.println("b = " + b);
@@ -28,6 +28,7 @@ public class Calculator {
         System.out.println("a / b = " + dividieren(a,b));
         System.out.println("a % b = " + restwert(a,b));
         System.out.println("a² = " + quadrieren(a));
+        System.out.println("b² = " + quadrieren(b));
 
     }
 
